@@ -16,7 +16,7 @@ export const Actions = {
 const putDataAction = payload => ({type: Actions.PUT_DATA, payload});
 
 const startLoadingAction = () => ({type: Actions.MSG_START_LOADING});
-const finishLoadingAction = () => ({type: Actions.MSG_FINISH_LOADING});
+export const finishLoadingAction = () => ({type: Actions.MSG_FINISH_LOADING});
 
 export const putMessage = payload => ({type: Actions.MSG_MESSAGE, payload});
 export const clearMessage = () => ({type: Actions.MSG_CLEAR});

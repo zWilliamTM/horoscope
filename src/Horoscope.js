@@ -17,7 +17,7 @@ const Horoscope = ({navigation, clearNavigate, info}) => {
 
   return (
     <View style={{flex: 1, padding: '10%', justifyContent: 'center'}}>
-      <Text>{info.horoscope}</Text>
+      <Text style={{fontSize: 20, textAlign: 'justify'}}>{info.horoscope}</Text>
     </View>
   );
 };
