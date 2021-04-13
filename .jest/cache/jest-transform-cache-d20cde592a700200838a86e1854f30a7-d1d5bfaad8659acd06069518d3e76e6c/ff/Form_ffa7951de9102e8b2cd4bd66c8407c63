@@ -1,0 +1,70 @@
+3279146e69bf0f3fdd784c94b76c4bde
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.toMeDate = void 0;
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactNative = require("react-native");
+
+var _reactNativePaper = require("react-native-paper");
+
+var _formik = require("formik");
+
+var _reactNativeDatePicker = _interopRequireDefault(require("react-native-date-picker"));
+
+var toMeDate = function toMeDate(date) {
+  return new Date(date.getYear(), date.getMonth(), date.getDay());
+};
+
+exports.toMeDate = toMeDate;
+
+var Form = function Form() {
+  var _useState = (0, _react.useState)(new Date()),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      date = _useState2[0],
+      setDate = _useState2[1];
+
+  var formik_form = {
+    initialValues: {
+      name: ''
+    },
+    onSubmit: function onSubmit(values) {
+      return console.log(values, toMeDate(date));
+    }
+  };
+  return _react.default.createElement(_reactNative.View, {
+    style: {
+      flex: 1
+    }
+  }, _react.default.createElement(_formik.Formik, formik_form, function (_ref) {
+    var handleChange = _ref.handleChange,
+        handleSubmit = _ref.handleSubmit,
+        values = _ref.values;
+    return _react.default.createElement(_reactNative.View, null, _react.default.createElement(_reactNativePaper.TextInput, {
+      mode: "outlined",
+      label: "Name",
+      value: values.name,
+      onChangeText: handleChange('name')
+    }), _react.default.createElement(_reactNativeDatePicker.default, {
+      androidVariant: "nativeAndroid",
+      mode: "date",
+      date: date,
+      onDateChange: setDate
+    }), _react.default.createElement(_reactNativePaper.Button, {
+      mode: "contained",
+      onPress: handleSubmit
+    }, "Horoscope"));
+  }));
+};
+
+var _default = Form;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkZvcm0uanMiXSwibmFtZXMiOlsidG9NZURhdGUiLCJkYXRlIiwiRGF0ZSIsImdldFllYXIiLCJnZXRNb250aCIsImdldERheSIsIkZvcm0iLCJzZXREYXRlIiwiZm9ybWlrX2Zvcm0iLCJpbml0aWFsVmFsdWVzIiwibmFtZSIsIm9uU3VibWl0IiwidmFsdWVzIiwiY29uc29sZSIsImxvZyIsImZsZXgiLCJoYW5kbGVDaGFuZ2UiLCJoYW5kbGVTdWJtaXQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBRU8sSUFBTUEsUUFBUSxHQUFHLFNBQVhBLFFBQVcsQ0FBQ0MsSUFBRDtBQUFBLFNBQVUsSUFBSUMsSUFBSixDQUFTRCxJQUFJLENBQUNFLE9BQUwsRUFBVCxFQUF5QkYsSUFBSSxDQUFDRyxRQUFMLEVBQXpCLEVBQTBDSCxJQUFJLENBQUNJLE1BQUwsRUFBMUMsQ0FBVjtBQUFBLENBQWpCOzs7O0FBRVAsSUFBTUMsSUFBSSxHQUFHLFNBQVBBLElBQU8sR0FBTTtBQUFBLGtCQUNPLHFCQUFTLElBQUlKLElBQUosRUFBVCxDQURQO0FBQUE7QUFBQSxNQUNWRCxJQURVO0FBQUEsTUFDSk0sT0FESTs7QUFFakIsTUFBTUMsV0FBVyxHQUFHO0FBQ2xCQyxJQUFBQSxhQUFhLEVBQUU7QUFBQ0MsTUFBQUEsSUFBSSxFQUFFO0FBQVAsS0FERztBQUVsQkMsSUFBQUEsUUFBUSxFQUFFLGtCQUFBQyxNQUFNO0FBQUEsYUFBSUMsT0FBTyxDQUFDQyxHQUFSLENBQVlGLE1BQVosRUFBb0JaLFFBQVEsQ0FBQ0MsSUFBRCxDQUE1QixDQUFKO0FBQUE7QUFGRSxHQUFwQjtBQUlBLFNBQ0UsNkJBQUMsaUJBQUQ7QUFBTSxJQUFBLEtBQUssRUFBRTtBQUFDYyxNQUFBQSxJQUFJLEVBQUU7QUFBUDtBQUFiLEtBQ0UsNkJBQUMsY0FBRCxFQUFZUCxXQUFaLEVBQ0c7QUFBQSxRQUFFUSxZQUFGLFFBQUVBLFlBQUY7QUFBQSxRQUFnQkMsWUFBaEIsUUFBZ0JBLFlBQWhCO0FBQUEsUUFBOEJMLE1BQTlCLFFBQThCQSxNQUE5QjtBQUFBLFdBQ0MsNkJBQUMsaUJBQUQsUUFDRSw2QkFBQywyQkFBRDtBQUNFLE1BQUEsSUFBSSxFQUFDLFVBRFA7QUFFRSxNQUFBLEtBQUssRUFBQyxNQUZSO0FBR0UsTUFBQSxLQUFLLEVBQUVBLE1BQU0sQ0FBQ0YsSUFIaEI7QUFJRSxNQUFBLFlBQVksRUFBRU0sWUFBWSxDQUFDLE1BQUQ7QUFKNUIsTUFERixFQU9FLDZCQUFDLDhCQUFEO0FBQ0UsTUFBQSxjQUFjLEVBQUMsZUFEakI7QUFFRSxNQUFBLElBQUksRUFBQyxNQUZQO0FBR0UsTUFBQSxJQUFJLEVBQUVmLElBSFI7QUFJRSxNQUFBLFlBQVksRUFBRU07QUFKaEIsTUFQRixFQWFFLDZCQUFDLHdCQUFEO0FBQVEsTUFBQSxJQUFJLEVBQUMsV0FBYjtBQUF5QixNQUFBLE9BQU8sRUFBRVU7QUFBbEMsbUJBYkYsQ0FERDtBQUFBLEdBREgsQ0FERixDQURGO0FBeUJELENBL0JEOztlQWlDZVgsSSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwge3VzZVN0YXRlfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7Vmlld30gZnJvbSAncmVhY3QtbmF0aXZlJztcclxuaW1wb3J0IHtUZXh0SW5wdXQsIEJ1dHRvbn0gZnJvbSAncmVhY3QtbmF0aXZlLXBhcGVyJztcclxuaW1wb3J0IHtGb3JtaWt9IGZyb20gJ2Zvcm1payc7XHJcbmltcG9ydCBEYXRlUGlja2VyIGZyb20gJ3JlYWN0LW5hdGl2ZS1kYXRlLXBpY2tlcic7XHJcblxyXG5leHBvcnQgY29uc3QgdG9NZURhdGUgPSAoZGF0ZSkgPT4gbmV3IERhdGUoZGF0ZS5nZXRZZWFyKCksIGRhdGUuZ2V0TW9udGgoKSwgZGF0ZS5nZXREYXkoKSlcclxuXHJcbmNvbnN0IEZvcm0gPSAoKSA9PiB7XHJcbiAgY29uc3QgW2RhdGUsIHNldERhdGVdID0gdXNlU3RhdGUobmV3IERhdGUoKSk7XHJcbiAgY29uc3QgZm9ybWlrX2Zvcm0gPSB7XHJcbiAgICBpbml0aWFsVmFsdWVzOiB7bmFtZTogJyd9LFxyXG4gICAgb25TdWJtaXQ6IHZhbHVlcyA9PiBjb25zb2xlLmxvZyh2YWx1ZXMsIHRvTWVEYXRlKGRhdGUpKSxcclxuICB9O1xyXG4gIHJldHVybiAoXHJcbiAgICA8VmlldyBzdHlsZT17e2ZsZXg6IDF9fT5cclxuICAgICAgPEZvcm1payB7Li4uZm9ybWlrX2Zvcm19PlxyXG4gICAgICAgIHsoe2hhbmRsZUNoYW5nZSwgaGFuZGxlU3VibWl0LCB2YWx1ZXN9KSA9PiAoXHJcbiAgICAgICAgICA8Vmlldz5cclxuICAgICAgICAgICAgPFRleHRJbnB1dFxyXG4gICAgICAgICAgICAgIG1vZGU9XCJvdXRsaW5lZFwiXHJcbiAgICAgICAgICAgICAgbGFiZWw9XCJOYW1lXCJcclxuICAgICAgICAgICAgICB2YWx1ZT17dmFsdWVzLm5hbWV9XHJcbiAgICAgICAgICAgICAgb25DaGFuZ2VUZXh0PXtoYW5kbGVDaGFuZ2UoJ25hbWUnKX1cclxuICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgPERhdGVQaWNrZXJcclxuICAgICAgICAgICAgICBhbmRyb2lkVmFyaWFudD1cIm5hdGl2ZUFuZHJvaWRcIlxyXG4gICAgICAgICAgICAgIG1vZGU9XCJkYXRlXCJcclxuICAgICAgICAgICAgICBkYXRlPXtkYXRlfVxyXG4gICAgICAgICAgICAgIG9uRGF0ZUNoYW5nZT17c2V0RGF0ZX1cclxuICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgPEJ1dHRvbiBtb2RlPVwiY29udGFpbmVkXCIgb25QcmVzcz17aGFuZGxlU3VibWl0fT5cclxuICAgICAgICAgICAgICBIb3Jvc2NvcGVcclxuICAgICAgICAgICAgPC9CdXR0b24+XHJcbiAgICAgICAgICA8L1ZpZXc+XHJcbiAgICAgICAgKX1cclxuICAgICAgPC9Gb3JtaWs+XHJcbiAgICA8L1ZpZXc+XHJcbiAgKTtcclxufTtcclxuXHJcbmV4cG9ydCBkZWZhdWx0IEZvcm07XHJcbiJdfQ==

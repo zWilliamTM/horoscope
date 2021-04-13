@@ -1,0 +1,23 @@
+8c34493a3c978e59d14f12e02606ece7
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactNative = require("react-native");
+
+var Horoscope = function Horoscope() {
+  return _react.default.createElement(_reactNative.View, {
+    style: {
+      flex: 1
+    }
+  }, _react.default.createElement(_reactNative.Text, null, "Horoscope"));
+};
+
+var _default = Horoscope;
+exports.default = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkhvcm9zY29wZS5qcyJdLCJuYW1lcyI6WyJIb3Jvc2NvcGUiLCJmbGV4Il0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBRUEsSUFBTUEsU0FBUyxHQUFHLFNBQVpBLFNBQVksR0FBTTtBQUN0QixTQUNFLDZCQUFDLGlCQUFEO0FBQU0sSUFBQSxLQUFLLEVBQUU7QUFBQ0MsTUFBQUEsSUFBSSxFQUFFO0FBQVA7QUFBYixLQUNFLDZCQUFDLGlCQUFELG9CQURGLENBREY7QUFLRCxDQU5EOztlQVFlRCxTIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IHtUZXh0LCBWaWV3fSBmcm9tICdyZWFjdC1uYXRpdmUnO1xyXG5cclxuY29uc3QgSG9yb3Njb3BlID0gKCkgPT4ge1xyXG4gIHJldHVybiAoXHJcbiAgICA8VmlldyBzdHlsZT17e2ZsZXg6IDF9fT5cclxuICAgICAgPFRleHQ+SG9yb3Njb3BlPC9UZXh0PlxyXG4gICAgPC9WaWV3PlxyXG4gICk7XHJcbn07XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIb3Jvc2NvcGU7XHJcbiJdfQ==

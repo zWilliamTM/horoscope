@@ -1,0 +1,23 @@
+2ab24b34676d95f459e88d8cf68eaf49
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+require("react-native");
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Form = _interopRequireWildcard(require("../src/Form"));
+
+var _reactTestRenderer = _interopRequireDefault(require("react-test-renderer"));
+
+describe('Test Form', function () {
+  it('Render', function () {
+    return _reactTestRenderer.default.create(_react.default.createElement(_Form.default, null));
+  });
+});
+it('Test func transform date', function () {
+  var test = new Date();
+  expect((0, _Form.toMeDate)(test).getTime()).equalTo(test.getTime());
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkZvcm0tdGVzdC5qcyJdLCJuYW1lcyI6WyJkZXNjcmliZSIsIml0IiwicmVuZGVyZXIiLCJjcmVhdGUiLCJ0ZXN0IiwiRGF0ZSIsImV4cGVjdCIsImdldFRpbWUiLCJlcXVhbFRvIl0sIm1hcHBpbmdzIjoiOzs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBRUE7O0FBRUFBLFFBQVEsQ0FBQyxXQUFELEVBQWMsWUFBTTtBQUMxQkMsRUFBQUEsRUFBRSxDQUFDLFFBQUQsRUFBVztBQUFBLFdBQU1DLDJCQUFTQyxNQUFULENBQWdCLDZCQUFDLGFBQUQsT0FBaEIsQ0FBTjtBQUFBLEdBQVgsQ0FBRjtBQUNELENBRk8sQ0FBUjtBQUlBRixFQUFFLENBQUMsMEJBQUQsRUFBNkIsWUFBTTtBQUNuQyxNQUFNRyxJQUFJLEdBQUcsSUFBSUMsSUFBSixFQUFiO0FBQ0FDLEVBQUFBLE1BQU0sQ0FBQyxvQkFBU0YsSUFBVCxFQUFlRyxPQUFmLEVBQUQsQ0FBTixDQUFpQ0MsT0FBakMsQ0FBeUNKLElBQUksQ0FBQ0csT0FBTCxFQUF6QztBQUNELENBSEMsQ0FBRiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAncmVhY3QtbmF0aXZlJztcclxuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcclxuaW1wb3J0IEZvcm0sIHt0b01lRGF0ZX0gZnJvbSAnLi4vc3JjL0Zvcm0nO1xyXG5cclxuaW1wb3J0IHJlbmRlcmVyIGZyb20gJ3JlYWN0LXRlc3QtcmVuZGVyZXInO1xyXG5cclxuZGVzY3JpYmUoJ1Rlc3QgRm9ybScsICgpID0+IHtcclxuICBpdCgnUmVuZGVyJywgKCkgPT4gcmVuZGVyZXIuY3JlYXRlKDxGb3JtIC8+KSk7XHJcbn0pO1xyXG5cclxuaXQoJ1Rlc3QgZnVuYyB0cmFuc2Zvcm0gZGF0ZScsICgpID0+IHtcclxuICBjb25zdCB0ZXN0ID0gbmV3IERhdGUoKTtcclxuICBleHBlY3QodG9NZURhdGUodGVzdCkuZ2V0VGltZSgpKS5lcXVhbFRvKHRlc3QuZ2V0VGltZSgpKTtcclxufSk7XHJcbiJdfQ==
